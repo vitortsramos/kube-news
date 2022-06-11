@@ -41,7 +41,7 @@ kind: Deployment
 metadata:
   name: kubenews
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: kubenews
@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: vitortsramos/kube-news:v2
+        image: vitortsramos/kube-news:v1
         env:
         - name: DB_PASSWORD
           value: "Kube#123"
@@ -74,6 +74,6 @@ spec:
   - port: 80
     targetPort: 8080
     nodePort: 30000
-  type: NodePort 
+  type: LoadBalancer 
 
 
