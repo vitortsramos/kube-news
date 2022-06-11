@@ -37,5 +37,5 @@ jobs:
           push: true
           tags: 
             vitortsramos/kube-news:latest
-            vitortsramos/kube-news:v${{github.run_number}}
+            vitortsramos/kube-news:${{github.run_number}}
           
